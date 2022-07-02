@@ -4,6 +4,6 @@ const { slackRequestVerification, slackUrlVerification } = require('../middlewar
 
 const router = express.Router();
 
-router.route('/event').post([slackUrlVerification, /* slackRequestVerification */], slackEventHandler);
+router.route('/event').post([slackUrlVerification, slackRequestVerification], slackEventHandler);
 
 module.exports = router;
